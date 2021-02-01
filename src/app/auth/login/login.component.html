@@ -1,0 +1,24 @@
+<ion-content>
+  <div class="header-img">
+    <img class="header-logo" src="../../../assets/logo.png" />
+    <p class="header-text">Sign in</p>
+  </div>
+  <form [formGroup]="loginForm">
+    <ion-list class="list-view">
+      <ion-item>
+        <ion-input formControlName="email" placeholder='Email' (keyup.enter)="onEnter($event)"></ion-input>
+      </ion-item>
+      <p class="error-text" *ngIf="loginFormSubmited && loginForm.controls?.email?.errors?.required">*Email is required.</p>
+      <p class="error-text" *ngIf="loginFormSubmited && loginForm.controls?.email?.errors?.pattern">Email is not valid.</p>
+      <ion-item>
+        <ion-input type="password" formControlName="password" placeholder='Password' (keyup.enter)="onEnter($event)"></ion-input>
+      </ion-item>
+      <p class="error-text" *ngIf="loginFormSubmited && loginForm.controls.password.errors?.required">*Password is required.</p>
+      <p class="forgot-password" (click)="openForgotPassword()">Forgot Password?</p>
+    </ion-list>
+  </form>
+  <div class="btn-div">
+    <ion-button class="btn-login" (click)="signInClick()" shape='round'>Sign in</ion-button>
+    
+  </div>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar [ngClass]="isIos == true ? 'fancard-ios-toolbar' : 'fancard-toolbar'">
+    <ion-buttons slot="start">
+        <ion-icon name="chevron-back-outline" (click)="onBackClick()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Profile Management</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profie-div">
+    <div class="img-div">
+      <img class="profile-img" *ngIf="schoolImage !== ''" src="{{schoolImage}}">
+      <img class="profile-img" *ngIf="schoolImage === ''" src="../../../assets/no-img.png">
+    </div>
+  </div>
+  <ion-list class="profile-info">
+    <ion-item>
+      <ion-label position="stacked" class="label-text">School Name</ion-label>
+      <ion-input [(ngModel)]="schoolName" readonly placeholder='School Name' class="label-input"  (keyup.enter)="onEnter($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" class="label-text">Email</ion-label>
+      <ion-input placeholder='Email' readonly class="label-input" [(ngModel)]="schoolEmail" (keyup.enter)="onEnter($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" class="label-text">Phone</ion-label>
+      <ion-input placeholder='Phone' readonly class="label-input" [(ngModel)]="schoolContact" (keyup.enter)="onEnter($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" class="label-text">Address</ion-label>
+      <ion-textarea placeholder='Address' readonly class="label-input" [(ngModel)]="schoolAddress" (keyup.enter)="onEnter($event)"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <div class="action-div">
+    <p class="change-password" (click)="openChangePassword()">Change Password</p>
+    <p class="change-password" (click)="logoutClick()">Logout</p>
+    <p class="app-version">Version {{appVersion}}</p>
+  </div>
+</ion-content>

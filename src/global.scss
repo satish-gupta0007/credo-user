@@ -1,0 +1,437 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+//code to remove
+
+body, span, button, p, ion-item,ion-label,ion-input,ion-card-subtitle,ion-card-content,ion-textarea{
+    font-family: 'SF-Regular' !important;
+}
+
+ion-title, h1, h2, h3, h4, h5, h6,ion-card-title{
+    font-family: 'SF-Medium' !important;
+}
+
+.header-md:after{
+    background-image: none !important;
+    content: none !important;
+}
+.fancard-header {
+     ion-toolbar {
+        --background:none !important;
+        
+     }
+     .fancard-toolbar{
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        background-color: var(--ion-color-primary); 
+        padding: 2px  !important;
+     }
+     .fancard-ios-toolbar{
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        background-color: var(--ion-color-primary); 
+        padding: 22px 10px 12px 11px !important;
+        ion-buttons{
+            padding-top: 13px !important;
+            height:40px !important;
+            width: 40px !important;
+        }
+        ion-title{
+            color: white;
+            font-size: 22px;
+            font-weight: 500;
+            margin-left: 9%;
+            letter-spacing: 1px;
+            text-align: center;
+            padding-top: 10px !important;
+        }
+     }
+
+    ion-button{
+        color: #fff;
+        font-size: 20px;
+    }
+    ion-buttons{
+        padding-top: 0px !important;
+    }
+    ion-title {
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        margin-left: 9%;
+        letter-spacing: 1px;
+        text-align: center
+    }
+   
+}
+
+.header-img {
+    background-image: url('assets/bg.png');
+    height: 250px;
+    width: 100%;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.header-logo {
+    background-image: url('./assets/logo.png');
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 80px;
+}
+
+.header-text {
+    position: absolute;
+    top: 57%;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+ion-button {
+    --background-color: var(--ion-color-primary);
+    --background-activated: var(--ion-color-primary) !important;
+    text-transform: capitalize;
+
+}
+
+ion-button:focus {
+    outline-color: transparent !important;
+}
+
+.error-text{
+    color: #ca4040;
+    margin: 0px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: left;    
+}
+
+.swal-title{
+    font-size: 25px !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+
+.swal-content {
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+
+.swal-image {
+    height: 150px;
+}
+
+.swal-popup {
+    border-radius: 15px !important;
+    width: 300px !important;
+    height: 300px !important;
+}
+
+//Custom Alert
+.custom-faliure-alert{
+    .alert-wrapper{
+       padding: 20px 0px 0px 0px;
+       border-radius: 7%;
+    }
+    .alert-head{
+            background: url('./assets/cancel.png');
+            background-repeat: no-repeat,no-repeat;
+            background-size: contain;
+            height: 112px;
+            background-position: center, 10px;
+            padding-bottom: 0px !important;
+    }
+    .alert-sub-title{
+            margin-top: 43%;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+    }
+    .alert-message{
+        padding-top: 15% !important;
+        font-size: 17px;
+        color: #222;
+        text-align: center;
+        font-weight: 600;
+        padding-bottom: 5px;
+    }
+}
+.custom-sucess-alert{
+        .alert-wrapper{
+            padding: 20px 0px 0px 0px;
+            border-radius: 7%;
+        }
+        .alert-head{
+                background: url('./assets/checked.png');
+                background-repeat: no-repeat,no-repeat;
+                background-size: contain;
+                height: 112px;
+                background-position: center, 10px;
+                padding-bottom: 0px !important;
+        }
+        .alert-sub-title{
+                margin-top: 45%;
+                text-align: center;
+                font-size: 25px;
+                font-weight: bold;
+        }
+        .alert-message{
+            padding-top: 15% !important;
+            font-size: 17px;
+            color: #222;
+            text-align: center;
+            font-weight: 600;
+            padding-bottom: 5px;
+        }
+}
+
+.logout-alert {
+
+    .alert-message {
+        padding-top: 34px 34px 20px 34px  !important;
+        font-weight: bold;
+    }
+    .alert-button-group{
+        padding-bottom: 20px !important;
+    }
+    .cancel-btn {
+        background: var(--ion-color-primary) !important;
+        color: #fff !important;
+        width: 45% !important;
+        font-weight: bold;
+        text-transform: capitalize;
+        span {
+            justify-content: center !important;
+        }
+    }
+    .ok-btn {
+        background: var(--ion-color-primary) !important;
+        color: #fff !important;
+        width: 45% !important;
+        font-weight: bold;
+        text-transform: capitalize;
+        span {
+            justify-content: center !important;
+        }
+    }
+}
+
+/*---LOADING CSSS---*/
+.custom-class-custom-loading{
+    ion-backdrop{
+        background: #f1f1f1;
+    }
+    .loading-wrapper{
+        background: transparent;
+        box-shadow: none !important;
+    }
+}
+
+.lds-circle {
+    display: inline-block;
+    transform: translateZ(1px);
+}
+
+.lds-circle>div {
+    display: inline-block;
+    width: 120px;
+    height: 130px;
+    margin: 6px;
+    border-radius: 50%;
+    background: url('./assets/loader.png');
+    background-size: auto 77%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: zoominoutsinglefeatured 2s infinite;
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+/*--Iphone XR----*/
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2) {
+
+    .fancard-ios-toolbar{
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        background-color: var(--ion-color-primary); 
+        padding: 37px 10px 12px 11px !important;
+        ion-buttons{
+                padding-top: 13px !important;
+                height:40px !important;
+                width: 40px !important;
+            }
+            ion-title{
+                color: white;
+                font-size: 22px;
+                font-weight: 500;
+                margin-left: 9%;
+                letter-spacing: 1px;
+                text-align: center;
+                padding-top: 10px !important;
+            }
+        }
+     }
+
+/*--Iphone XS----*/
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+
+     }
+
+
+/*--Iphone XS MAX----*/
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+    .fancard-ios-toolbar{
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        background-color: var(--ion-color-primary); 
+        padding: 37px 10px 12px 11px !important;
+        ion-buttons{
+                padding-top: 13px !important;
+                height:40px !important;
+                width: 40px !important;
+            }
+            ion-title{
+                color: white;
+                font-size: 22px;
+                font-weight: 500;
+                margin-left: 9%;
+                letter-spacing: 1px;
+                text-align: center;
+                padding-top: 10px !important;
+            }
+        }
+    }
+/*--Iphone 11 ----*/
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+    .fancard-ios-toolbar{
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        background-color: var(--ion-color-primary); 
+        padding: 37px 10px 12px 11px !important;
+        ion-buttons{
+                padding-top: 13px !important;
+                height:40px !important;
+                width: 40px !important;
+            }
+            ion-title{
+                color: white;
+                font-size: 22px;
+                font-weight: 500;
+                margin-left: 9%;
+                letter-spacing: 1px;
+                text-align: center;
+                padding-top: 10px !important;
+            }
+        }
+    }
+
+/*--Iphone 11 PRO ----*/  
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+    .fancard-ios-toolbar{
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        background-color: var(--ion-color-primary); 
+        padding: 37px 10px 12px 11px !important;
+        ion-buttons{
+                padding-top: 13px !important;
+                height:40px !important;
+                width: 40px !important;
+            }
+            ion-title{
+                color: white;
+                font-size: 22px;
+                font-weight: 500;
+                margin-left: 9%;
+                letter-spacing: 1px;
+                text-align: center;
+                padding-top: 10px !important;
+            }
+        }
+    }
+
+/*--Iphone 11 PRO ----*/
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+    .fancard-ios-toolbar{
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        background-color: var(--ion-color-primary); 
+        padding: 37px 10px 12px 11px !important;
+        ion-buttons{
+                padding-top: 13px !important;
+                height:40px !important;
+                width: 40px !important;
+            }
+            ion-title{
+                color: white;
+                font-size: 22px;
+                font-weight: 500;
+                margin-left: 9%;
+                letter-spacing: 1px;
+                text-align: center;
+                padding-top: 10px !important;
+            }
+        }
+    }
