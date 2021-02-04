@@ -1,5 +1,5 @@
 <app-slide ></app-slide>
-<div class="ion-page" id="main-content">
+<!-- <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
@@ -8,4 +8,27 @@
       <ion-title>Map</ion-title>
     </ion-toolbar>
   </ion-header>
-</div>
+</div> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+     AGM Demo - Ionic 4
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- <agm-map
+   [style.height.px]="height"
+   [latitude]="lat"
+   [longitude]="lng">
+     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map> -->
+  <agm-map
+  [style.height.px]="height"
+          [latitude]="coordinates.latitude"
+          [longitude]="coordinates.longitude"
+          [zoom]="10" *ngIf="coordinates">
+     <agm-marker [latitude]="coordinates.latitude" [longitude]="coordinates.longitude"></agm-marker>
+
+</agm-map>
+</ion-content>

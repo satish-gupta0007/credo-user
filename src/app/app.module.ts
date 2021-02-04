@@ -16,7 +16,7 @@ import {AngularFireModule} from 'angularfire2'
 
 import {AngularFireAuthModule} from 'angularfire2/auth'
 import { environment } from 'src/environments/environment';
-// import { AgmCoreModule } from '@agm/core';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,10 +30,10 @@ import { environment } from 'src/environments/environment';
     ReactiveFormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    // AgmCoreModule.forRoot({
+    AgmCoreModule.forRoot({
   
-    //   apiKey: 'AIzaSyDXOhUlIel05T_Rx3ZmkEGgZGIlrZlmZqU'
-    // })
+      apiKey: 'AIzaSyDXOhUlIel05T_Rx3ZmkEGgZGIlrZlmZqU'
+    })
     
 
   ],

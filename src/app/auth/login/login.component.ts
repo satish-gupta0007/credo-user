@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalController, NavController, IonRouterOutlet, Platform } from '@ionic/angular';
+import { ModalController, NavController, IonRouterOutlet, Platform,ToastController} from '@ionic/angular';
 import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
 // import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { HttpService } from '../../../shared/http/http.service';
 // import { APIconstants } from '../../../shared/constants';
 // import { AuthService } from '../../../shared/auth/auth.service';
+// import { ToastController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit {
     public navCtrl: NavController,
     public plt: Platform,
     public router: Router,
+    private toastController: ToastController
     // public mainService: MainService,
     // public keyboard: Keyboard,
 
@@ -73,8 +75,15 @@ export class LoginComponent implements OnInit {
     await modal.present();
   }
 
-  signInClick() {
+ async signInClick() {
 //NEW CODE
+const toast = await this.toastController.create({
+  color: 'light',
+  duration: 2000,
+  keyboardClose:true,
+  message: 'Login Successfull!!',
+});
+await toast.present();
 this.router.navigate(['/home']);
     //OLD CODE 
   //   this.loginFormSubmited = true;

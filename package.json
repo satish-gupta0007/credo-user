@@ -13,6 +13,7 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^3.0.0-beta.0",
     "@angular/common": "~8.2.14",
     "@angular/core": "~8.2.14",
     "@angular/forms": "~8.2.14",
@@ -45,6 +46,7 @@
     "@angular/language-service": "~8.2.14",
     "@capacitor/cli": "2.0.0",
     "@ionic/angular-toolkit": "^2.1.1",
+    "@types/googlemaps": "^3.43.2",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/lodash": "^4.14.149",

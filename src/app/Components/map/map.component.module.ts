@@ -6,6 +6,8 @@ import { SlideComponent } from '../slide/slide.component';
 import { SlideModule } from '../slide/slide.component.module';
 import { MapComponent } from './map.component';
 import { MapRoutingModule } from './map.component-routing.module';
+import { AgmCoreModule } from '@agm/core';
+import { GeoLocationService } from 'src/app/shared/geo-location.service';
 
 @NgModule({
   imports: [
@@ -13,7 +15,11 @@ import { MapRoutingModule } from './map.component-routing.module';
     FormsModule,
     IonicModule,
     MapRoutingModule,
-    SlideModule
+    SlideModule,
+    AgmCoreModule
+  ],
+  providers:[
+    GeoLocationService
   ],
   declarations: [MapComponent],
   exports:[],
